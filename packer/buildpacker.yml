@@ -10,7 +10,6 @@ phases:
       - mv jq /usr/local/bin 
       - pwd
       - ls -lrt
-      - chmod +x packer.json
       - packer validate packer.json
   build:
     commands:
