@@ -1,1 +1,1 @@
-# JAVACICDpipeline
+# javaCICDpipeline
