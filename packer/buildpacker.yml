@@ -10,6 +10,8 @@ phases:
       - mv jq /usr/local/bin 
       - pwd
       - ls -lrt
+      - ls -lrt $CODEBUILD_SRC_DIR
+      - cd $CODEBUILD_SRC_DIR/packer/
       - packer validate packer.json
   build:
     commands:
