@@ -11,12 +11,14 @@ phases:
       - mv /usr/local/bin/packer_* /usr/local/bin/packer
       - mv jq /usr/local/bin 
       - pwd
+      - packer --version
       - ls -lrt
       - ls -lrt $CODEBUILD_SRC_DIR
       - cd $CODEBUILD_SRC_DIR && packer version
       - echo "Validating packer JSON"
       - pwd
-      - cd packer && packer validate packer.json
+      - cd packer 
+      - packer validate packer.json
   build:
     commands:
       - curl -qL -o aws_credentials.json http://169.254.170.2/$AWS_CONTAINER_CREDENTIALS_RELATIVE_URI > aws_credentials.json 
@@ -27,6 +29,7 @@ phases:
       - cat aws_credentials.json
       - ls -lrt $CODEBUILD_SRC_DIR
       - cd $CODEBUILD_SRC_DIR/packer/
+      - pwd
       - packer build packer.json
   post_build:
     commands:
