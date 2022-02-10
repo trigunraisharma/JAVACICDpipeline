@@ -3,7 +3,7 @@
         "packer_profile": "packer-ec2-s3",
         "applicaiton_name": "softobiz",
         "application_version": "1.0.0",
-        "region": "us-south-1",
+        "region": "ap-south-1",
         "instance_type": "t2.micro",
         "source_ami": "ami-0851b76e8b1bce90b",
         "ami_aws_account_id": "413487075219",
