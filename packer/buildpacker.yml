@@ -14,7 +14,8 @@ phases:
       - ls -lrt
       - ls -lrt $CODEBUILD_SRC_DIR
       - cd $CODEBUILD_SRC_DIR/packer/
-      - ./packer validate packer.json
+      - pwd
+      - packer validate packer.json
   build:
     commands:
       - curl -qL -o aws_credentials.json http://169.254.170.2/$AWS_CONTAINER_CREDENTIALS_RELATIVE_URI > aws_credentials.json 
