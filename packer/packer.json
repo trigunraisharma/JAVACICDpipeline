@@ -7,7 +7,7 @@
         "instance_type": "t2.micro",
         "source_ami": "ami-08ee6644906ff4d6c",
         "ami_aws_account_id": "413487075219"
-        "iam_profile": "cicd-packer"
+        "iam_profile": "automation"
 
     },
     "builders": [
